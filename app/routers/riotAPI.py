@@ -1,6 +1,7 @@
 import requests, json, os
 from fastapi import FastAPI, APIRouter
 from ..settings import api_key
+from ..df import createDataframe
 
 euw1 = "https://euw1.api.riotgames.com/lol/"
 europe = "https://europe.api.riotgames.com/lol/"
@@ -34,7 +35,8 @@ async def lMatch(player: str):
 
 @router.get("/match/{gameId}")
 async def detailedMatch(gameId: str):
-        url = f"{europe}match/v5/matches/{gameId}'?api_key={api_key}"
+        url = f"{europe}match/v5/matches/{gameId}?api_key={api_key}"
+        print(url)
         response = requests.get(url).json()
         game = json.loads(json.dumps(response))
         
@@ -52,3 +54,11 @@ async def matches(player: str):
         games = json.loads(json.dumps(response))
         
         return games
+
+@router.get("/matchDF/{gameId}")
+async def detailedMatchDF(gameId: str):
+        url = f"{europe}match/v5/matches/{gameId}?api_key={api_key}"
+        response = requests.get(url).json()
+        df = createDataframe(response)
+        
+        return df
