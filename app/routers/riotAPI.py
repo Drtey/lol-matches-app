@@ -38,6 +38,7 @@ async def detailedMatch(gameId: str):
         
         return game
 
+
 @router.get("/matches/{player}")
 async def matches(player: str):
         url = f"{settings.euw1}summoner/v4/summoners/by-name/{player}?api_key={settings.api_key}"
