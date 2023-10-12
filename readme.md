@@ -4,12 +4,6 @@ This project aims to take care of ingesting data from Leagues of Legends´s matc
 
 REST API developed with [Python](https://www.python.org/) && [FastAPI](https://fastapi.tiangolo.com)
 
-### Run project
-```
-$ uvicorn <directory>.<filename>:<namevariable> --reload
-$ uvicorn app.main:app --reload
-```
-
 ### Create virtual environment
 ```
 $ python3 -m venv <name_of_environment>
@@ -19,6 +13,12 @@ $ source <name_of_environment>/bin/activate
 ### Install dependencies
 ```
 $ pip install -r requirements.txt
+```
+
+### Run project
+```
+$ uvicorn <directory>.<filename>:<namevariable> --reload
+$ uvicorn app.main:app --reload
 ```
 
 ### Project structure
