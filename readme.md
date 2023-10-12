@@ -21,5 +21,21 @@ $ source <name_of_environment>/bin/activate
 $ pip install -r requirements.txt
 ```
 
+### Project structure
+
+├── app
+│   ├── __pycache__
+│   ├── main.py
+│   ├── routers
+│   └── settings.py
+├── readme.md
+├── requirements.txt
+└── venv
+    ├── bin
+    ├── include
+    ├── lib
+    ├── lib64 -> lib
+    └── pyvenv.cfg
+
 ### API DOCS
 http://127.0.0.1:8000//docs & http://127.0.0.1:8000//redoc 
