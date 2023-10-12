@@ -22,7 +22,7 @@ $ pip install -r requirements.txt
 ```
 
 ### Project structure
-
+```
 ├── app
 │   ├── __pycache__
 │   ├── main.py
@@ -36,6 +36,7 @@ $ pip install -r requirements.txt
     ├── lib
     ├── lib64 -> lib
     └── pyvenv.cfg
+```
 
 ### API DOCS
 http://127.0.0.1:8000//docs & http://127.0.0.1:8000//redoc 
